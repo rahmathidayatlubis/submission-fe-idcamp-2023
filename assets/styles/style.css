@@ -1,0 +1,412 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+
+  margin: 0;
+  padding: 0;
+}
+
+h2,
+h3 {
+  color: #284776;
+}
+
+
+footer {
+  padding: 20px;
+  color: white;
+  background-color: #284776;
+
+  text-align: center;
+  font-weight: 600;
+}
+
+.featured-image {
+  width: 100%;
+  max-height: 500px;
+  object-fit: none;
+  object-position: top;
+}
+
+#penampilan .featured-image, #mekanik .featured-image {
+  width: 100%;
+  max-height: 500px;
+  object-fit: contain;
+  object-position: top;
+}
+
+#rilis section {
+  display: flex;
+  flex-direction: row;
+  column-gap: 1rem;
+  align-content: flex-start;
+  padding: 0;
+}
+
+#rilis section p {
+  padding: 0px;
+  margin-top: 0px;
+}
+
+#rilis .featured-image {
+  width: 100%;
+  max-height: 500px;
+  object-fit: contain;
+  object-position: top;
+}
+
+
+.profile img {
+  width: 200px;
+}
+
+.card {
+  position: relative;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+
+  padding: 60px 35px 60px 35px;
+  margin-top: 20px;
+}
+
+.card h2 {
+  margin: 0px;
+  padding-left: 30px;
+  padding-right: 45px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  color: white;
+  letter-spacing: 0.5px;
+  font-weight: 600;
+}
+
+.tag-judul {
+  position: absolute;
+  background-color: #284776;
+  /* border: 1px solid black; */
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.1);
+  top: 0;
+  left: 0;
+  border-radius: 5px 0px 40px 0px;
+}
+
+.jumbotron {
+  font-size: 20px;
+  padding: 60px;
+  background-color: #00c8eb;
+  text-align: center;
+  color: white;
+}
+
+nav ul {
+  padding-inline: 4rem;
+  display: flex;
+
+  gap: 2rem;
+}
+
+nav li {
+  list-style-type: none;
+  margin-right: 20px;
+}
+
+nav {
+  background-color: #284776;
+  padding: 5px;
+
+  position: sticky;
+  top: 0;
+  z-index: 3;
+}
+
+header {
+  display: inline;
+}
+
+nav a {
+  font-size: 18px;
+  font-weight: 400;
+  text-decoration: none;
+ 
+  color: #f8fafc;
+}
+
+.navbar-fixed a {
+  font-size: 18px;
+  font-weight: 400;
+  text-decoration: none;
+ 
+  color: #0f172a;
+}
+
+nav a:hover {
+  color: #2e98e4;
+}
+ 
+.profile header {
+  text-align: center;
+}
+
+.avatar h2, .avatar p {
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
+main {
+  padding: 20px;
+
+  overflow: auto;
+
+  display: flex;
+  gap: 1.5rem;
+}
+
+#content {
+  flex: 5;
+
+  display: flex;
+  flex-flow: column nowrap;
+  gap: 1rem 2rem;
+}
+
+aside {
+  flex: 1;
+}
+
+aside .profile h2 {
+  color: #284776;
+}
+
+aside .profile {
+  padding-top: 30px;
+}
+
+.carousel {
+  width: 100%;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.slides{
+  width: 100%;
+  position: relative;
+}
+  
+.slides .slide{
+  display: none;
+}
+  
+.slides .slide img{
+  width: 100%;
+  animation-name: fade;
+  animation-duration: 1.5s;
+  border-radius: 10px 10px 10px 10px;
+}
+
+th {
+  text-align: start;
+  padding-right: 30px;
+}
+
+.vision {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin: 0;
+}
+
+.vision img {
+  width: 25px;
+  height: 25px;
+  margin-right: 5px;
+}
+  
+.slides .navigation{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+  
+.slides .navigation .prev {
+  cursor: pointer;
+  padding: 16px 30px 16px 16px;
+  border-radius: 0px 30px 30px 0px;
+  font-weight: bold;
+  font-size: 20px;
+  color: white;
+  background: rgba(0,0,0,0.2);
+  user-select: none;
+  transition: 0.6s ease;
+}
+
+.slides .navigation .next{
+  cursor: pointer;
+  padding: 16px 16px 16px 30px;
+  border-radius: 30px 0px 0px 30px;
+  font-weight: bold;
+  font-size: 20px;
+  color: white;
+  background: rgba(0,0,0,0.2);
+  user-select: none;
+  transition: 0.6s ease;
+}
+
+  
+.slides .navigation .prev:hover, .slides .navigation .next:hover{
+  background: rgba(40,71,118,1);
+}
+  
+@keyframes fade {
+  from{opacity: 0.3}
+  to {opacity: 1}
+}
+
+@media screen and (max-width: 1200px) {
+  main {
+    flex-flow: column nowrap;
+    flex-direction: column-reverse;
+  }
+
+  main aside {
+    align-self: center;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  #content, aside {
+    width: 100%;
+    padding: 0;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  main {
+    padding: 20px 10px 20px 10px;
+  }
+
+  nav ul {
+    justify-content: center;
+    padding-inline: 0;
+    gap: 0;
+  }
+
+  nav a {
+    font-size: 16px;
+  }
+  
+  #content .card {
+    padding: 60px 20px 60px 20px;
+  }
+
+  #penampilan .featured-image, #mekanik .featured-image {
+    width: 100%;
+    max-height: 100%;
+  }
+
+  main aside {
+    align-self: stretch;
+  }
+
+  #rilis section {
+    flex-flow: column;
+    row-gap: 23px;
+  }
+
+  #rilis .featured-image {
+    width: 100%;
+    max-height: 500px;
+    object-fit: cover;
+    object-position: top;
+  }
+  
+  
+  .slides .navigation .next{
+    font-size: 15px;
+    padding: 10px 10px 10px 15px;
+    border-radius: 20px 0px 0px 20px;
+  }
+
+  .slides .navigation .prev{
+    font-size: 15px;
+    padding: 10px 15px 10px 10px;
+    border-radius: 0px 20px 20px 0px;
+  }
+
+  .carousel {
+    padding: 0px;
+  }
+
+  .slides .slide img{
+  border-radius: 0px;
+}
+}
+  
+
+.justified-text {
+  text-align: justify;
+  text-indent: 2em;
+}
+
+.glass-effect {
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.1));
+  backdrop-filter: blur(21px);
+  -webkit-backdrop-filter: blur(21px);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.16);
+}
+
+/* membuat container atau wadah dari scrollbar dengan lebar 20px  */
+::-webkit-scrollbar {
+    width: 20px;
+  }
+
+  /* membuat background dari scrollbar */
+  /* kasih warna transparan agar lebih estetik  */
+  ::-webkit-scrollbar-track {
+    background-color: transparent;
+  }
+
+
+  /* membuat styling pada batang atau bar scrollbar  */
+  /* kita beri warna abu tua dengan lengkungan di sisi atas dan bawahnya  */
+  ::-webkit-scrollbar-thumb {
+    background-color: #d6dee1;
+    border-radius: 20px;
+    border: 6px solid transparent;
+    background-clip: content-box;
+  }
+
+  /* warna akan berubah menjad abu mudah saat kursor diarahkan  */
+  ::-webkit-scrollbar-thumb:hover {
+    background-color: #a8bbbf;
+  }
+
+#top {
+  background-color: #284776;
+  color: white;
+  position: fixed;
+  z-index: 4;
+  right: 10px;
+  bottom: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50px;
+  height: 50px;
+  border-radius: 25px;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 5px 8px 30px 5px rgba(0, 0, 0, 0.6);
+}
